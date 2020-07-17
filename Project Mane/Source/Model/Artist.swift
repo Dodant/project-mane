@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Aritist.swift
 //  Project Mane
 //
 //  Created by Junggyun Oh on 2020/07/18.
@@ -8,20 +8,17 @@
 
 import Foundation
 
-enum Sex {
-	case male, female
-}
-
-struct User {
+struct Artist {
 	let name: String
 	let nickname: String
 	let age: Int
 	let sex: Sex
 	let email: String
+	let bankAccount: String
 	
 	let id: String
 	let password: String
 	
-	let subscriptionDate: Date
-	let isSubscriber: Bool
+	let selfIntroduction: String
+	let liked: Int
 }

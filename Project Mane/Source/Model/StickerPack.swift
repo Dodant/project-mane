@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct StickerPack {
+	let name: String
+	let numberOfSticker: Int
+	
+//	let artist
+	let tags: [String]
+	let liked: Int
+	let numberOfDownloaded: Int
+}
