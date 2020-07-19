@@ -9,9 +9,7 @@
 import Foundation
 
 struct Sticker {
-	let id: UUID = UUID()
-	let name: String
+//	let id: UUID = UUID()
+//	let name: String
 //	let image:
-	
-	
 }

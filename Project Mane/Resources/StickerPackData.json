@@ -1,0 +1,38 @@
+[
+  {
+	"name": "League of Legends Emote",
+	"packImageName": "teemo",
+	"artist": "Riot Games",
+	"isFavorite": true
+  },
+  {
+	"name": "Baby Shark",
+	"packImageName": "baby shark",
+	"artist": "Smart Study",
+	"isFavorite": false
+  },
+  {
+	"name": "Pinkfong",
+	"packImageName": "pinkfong",
+	"artist": "Smart Study",
+	"isFavorite": true
+  },
+  {
+	"name": "Rick and Morty",
+	"packImageName": "rick and morty",
+	"artist": "Adult Swim",
+	"isFavorite": false
+  },
+  {
+	"name": "Happy Tree Friends",
+	"packImageName": "happy tree friends",
+	"artist": "Mondo Media",
+	"isFavorite": true
+  },
+  {
+	"name": "빵빵이의 일상",
+	"packImageName": "빵빵이",
+	"artist": "이주용",
+	"isFavorite": false
+  }
+]

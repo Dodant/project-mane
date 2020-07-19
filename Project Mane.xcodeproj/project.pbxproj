@@ -18,10 +18,16 @@
 		BB02A22124C1FF7D004CB0D2 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02A22024C1FF7D004CB0D2 /* Profile.swift */; };
 		BB62347E24C1D42F004F8099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62347D24C1D42F004F8099 /* AppDelegate.swift */; };
 		BB62348024C1D42F004F8099 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62347F24C1D42F004F8099 /* SceneDelegate.swift */; };
-		BB62348224C1D42F004F8099 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62348124C1D42F004F8099 /* MainTabView.swift */; };
+		BB62348224C1D42F004F8099 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62348124C1D42F004F8099 /* Home.swift */; };
 		BB62348424C1D431004F8099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB62348324C1D431004F8099 /* Assets.xcassets */; };
 		BB62348724C1D431004F8099 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB62348624C1D431004F8099 /* Preview Assets.xcassets */; };
 		BB62348A24C1D431004F8099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB62348824C1D431004F8099 /* LaunchScreen.storyboard */; };
+		BBB8617224C42C4B0031CD82 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8617124C42C4B0031CD82 /* BundleExtension.swift */; };
+		BBB8617424C42D490031CD82 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8617324C42D490031CD82 /* Store.swift */; };
+		BBB8617624C436EB0031CD82 /* StickerPackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */; };
+		BBF5EA9D24C40A1700D2474F /* StickerPackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */; };
+		BBF5EA9F24C40BBF00D2474F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF5EA9E24C40BBF00D2474F /* ColorExtension.swift */; };
+		BBF5EAA924C41B4C00D2474F /* StickerPackData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBF5EAA824C41B4C00D2474F /* StickerPackData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +53,18 @@
 		BB62347A24C1D42F004F8099 /* Project Mane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Mane.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB62347D24C1D42F004F8099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB62347F24C1D42F004F8099 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB62348124C1D42F004F8099 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		BB62348124C1D42F004F8099 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BB62348324C1D431004F8099 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB62348624C1D431004F8099 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB62348924C1D431004F8099 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB62348B24C1D431004F8099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB62349024C1D431004F8099 /* Project ManeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project ManeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB8617124C42C4B0031CD82 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		BBB8617324C42D490031CD82 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackDetailView.swift; sourceTree = "<group>"; };
+		BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackRow.swift; sourceTree = "<group>"; };
+		BBF5EA9E24C40BBF00D2474F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		BBF5EAA824C41B4C00D2474F /* StickerPackData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StickerPackData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				BB62348324C1D431004F8099 /* Assets.xcassets */,
+				BBF5EAA824C41B4C00D2474F /* StickerPackData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -112,7 +125,9 @@
 		BB02A20624C1F803004CB0D2 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				BB62348124C1D42F004F8099 /* MainTabView.swift */,
+				BB62348124C1D42F004F8099 /* Home.swift */,
+				BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */,
+				BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */,
 				BB02A20824C1F974004CB0D2 /* Today */,
 				BB02A20924C1F981004CB0D2 /* For You */,
 				BB02A21524C1FA35004CB0D2 /* Live */,
@@ -165,6 +180,8 @@
 		BB02A20C24C1F9C7004CB0D2 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				BBF5EA9E24C40BBF00D2474F /* ColorExtension.swift */,
+				BBB8617124C42C4B0031CD82 /* BundleExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -221,6 +238,7 @@
 				BB02A20F24C1FA0B004CB0D2 /* Sticker.swift */,
 				BB02A21124C1FA1C004CB0D2 /* Artist.swift */,
 				BB02A21324C1FA2A004CB0D2 /* User.swift */,
+				BBB8617324C42D490031CD82 /* Store.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +327,7 @@
 				BB62348A24C1D431004F8099 /* LaunchScreen.storyboard in Resources */,
 				BB62348724C1D431004F8099 /* Preview Assets.xcassets in Resources */,
 				BB62348424C1D431004F8099 /* Assets.xcassets in Resources */,
+				BBF5EAA924C41B4C00D2474F /* StickerPackData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,12 +348,17 @@
 				BB02A21F24C1FF72004CB0D2 /* Search.swift in Sources */,
 				BB02A22124C1FF7D004CB0D2 /* Profile.swift in Sources */,
 				BB02A20E24C1F9FB004CB0D2 /* StickerPack.swift in Sources */,
+				BBB8617424C42D490031CD82 /* Store.swift in Sources */,
 				BB62347E24C1D42F004F8099 /* AppDelegate.swift in Sources */,
 				BB02A21224C1FA1C004CB0D2 /* Artist.swift in Sources */,
+				BBB8617224C42C4B0031CD82 /* BundleExtension.swift in Sources */,
+				BBF5EA9F24C40BBF00D2474F /* ColorExtension.swift in Sources */,
 				BB02A21D24C1FF63004CB0D2 /* Live.swift in Sources */,
 				BB62348024C1D42F004F8099 /* SceneDelegate.swift in Sources */,
-				BB62348224C1D42F004F8099 /* MainTabView.swift in Sources */,
+				BBB8617624C436EB0031CD82 /* StickerPackDetailView.swift in Sources */,
+				BB62348224C1D42F004F8099 /* Home.swift in Sources */,
 				BB02A21024C1FA0B004CB0D2 /* Sticker.swift in Sources */,
+				BBF5EA9D24C40A1700D2474F /* StickerPackRow.swift in Sources */,
 				BB02A21424C1FA2A004CB0D2 /* User.swift in Sources */,
 				BB02A21B24C1FF56004CB0D2 /* ForYou.swift in Sources */,
 				BB02A21924C1FF3F004CB0D2 /* Today.swift in Sources */,
@@ -490,6 +514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Project Mane/Preview Content\"";
+				DEVELOPMENT_TEAM = DY5CLPAQHF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Project Mane/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,6 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Project Mane/Preview Content\"";
+				DEVELOPMENT_TEAM = DY5CLPAQHF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Project Mane/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
