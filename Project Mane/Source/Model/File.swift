@@ -1,5 +1,5 @@
 //
-//  Artist.swift
+//  File.swift
 //  Project Mane
 //
 //  Created by 김창영 on 2020/07/20.
