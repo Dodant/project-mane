@@ -9,42 +9,18 @@
 import SwiftUI
 
 struct ForYouView: View {
-	let store: Store
+	@EnvironmentObject private var store: Store
 	
 	var body: some View {
-		//		NavigationView {
-		//			List {
-		//				ForEach (store.stickerPacks) { stickerPack in
-		//					HStack {
-		//						StickerPackRow(stickerPack: stickerPack)
-		//						NavigationLink(destination: StickerPackDetailView(stickerPack: stickerPack)) {
-		//							EmptyView()
-		//						}.frame(width: 0).hidden()
-		//					}
-		//				}
-		//			}
-		//			.navigationBarTitle("For You", displayMode: .large)
-		//		}.onAppear {UITableView.appearance().separatorStyle = .none}
-		
-		ScrollView {
-			VStack(alignment: .leading) {
-				HStack {
-					VStack(alignment: .leading) {
-						Text("For You")
-							.font(Font.largeTitle).bold()
-					}
-					Spacer()
-				}
-				.padding([.leading, .trailing, .top])
-				
+		NavigationView {
+			ScrollView {
 				ForEach (store.stickerPacks) { stickerPack in
 					HStack {
-						StickerPackRow(stickerPack: stickerPack)
 						NavigationLink(destination: StickerPackDetailView(stickerPack: stickerPack)) {
-							EmptyView()
-						}.frame(width: 0).hidden()
+							StickerPackRow(stickerPack: stickerPack)
+						}
 					}
-				}
+				}.navigationBarTitle("For You", displayMode: .automatic)
 			}
 		}
 	}
@@ -52,6 +28,7 @@ struct ForYouView: View {
 
 struct ForYouView_Previews: PreviewProvider {
 	static var previews: some View {
-		ForYouView(store: Store())
+		Preview(source: ForYouView())
+			.environmentObject(Store())
 	}
 }

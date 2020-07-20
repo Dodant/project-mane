@@ -51,10 +51,7 @@ struct StickerPackDetailView: View {
 				
 				Spacer()
 				
-				Image(systemName: "heart")
-					.imageScale(.large)
-					.foregroundColor(Color.sky)
-					.frame(width: 40, height: 40)
+				FavoriteButton(stickerPack: stickerPack)
 			}
 			
 			Text(stickerPack.artist)

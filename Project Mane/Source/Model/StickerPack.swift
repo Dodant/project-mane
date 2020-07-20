@@ -24,6 +24,7 @@ struct StickerPack {
 
 extension StickerPack : Identifiable { }
 extension StickerPack : Decodable { }
+extension StickerPack : Equatable { }
 
 let stickerPackSamples = [
 	StickerPack(name: "League of Legends Emote", packImageName: "teemo",

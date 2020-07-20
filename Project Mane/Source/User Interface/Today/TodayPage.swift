@@ -15,7 +15,7 @@ struct TodayView: View {
 				HStack {
 					VStack(alignment: .leading) {
 						
-						Text("Monday, Jul 20")
+						Text(todayFormatter())
 							.foregroundColor(.gray)
 							.bold()
 							.font(Font.footnote)
@@ -62,6 +62,13 @@ struct TodayView: View {
 	func loadProfile(){
 		
 	}
+	
+	func todayFormatter() -> String {
+		let date = Date()
+		let formatter = DateFormatter()
+		formatter.dateFormat = "EEEE, MMMM dd"
+		return formatter.string(from: date)
+	}
 }
 
 struct HighlightView: View {
@@ -97,8 +104,6 @@ struct HighlightView: View {
 	}
 	
 }
-
-
 
 struct TodayView_Previews: PreviewProvider {
 	static var previews: some View {

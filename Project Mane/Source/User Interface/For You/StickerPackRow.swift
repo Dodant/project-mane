@@ -27,16 +27,19 @@ struct StickerPackRow: View {
 private extension StickerPackRow {
 	var packImage: some View {
 		Image(stickerPack.packImageName)
+			.renderingMode(.original)
 			.resizable()
 			.scaledToFit()
 			.frame(width: 120)
 			.clipped()
+			
 	}
 	var packInfo: some View {
 		VStack(alignment: .leading) {
 			Spacer()
 			
 			Text(stickerPack.name)
+				.foregroundColor(Color.black)
 				.font(.headline)
 				.fontWeight(.medium)
 				.padding(.bottom, 6)
@@ -58,10 +61,7 @@ private extension StickerPackRow {
 		HStack(spacing: 5) {
 			Spacer()
 			
-			Image(systemName: "heart")
-				.imageScale(.large)
-				.foregroundColor(Color("sky"))
-				.frame(width: 35, height: 35)
+			FavoriteButton(stickerPack: stickerPack)
 			
 			Image(systemName: "plus.circle")
 				.imageScale(.large)
