@@ -9,18 +9,24 @@
 import SwiftUI
 
 struct StickerPackDetailView: View {
-	@State private var showingAlert: Bool = false
+	@EnvironmentObject private var store: Store
 	let stickerPack : StickerPack
+	
+	@State private var showingAlert: Bool = false
+	@State private var showingPopup: Bool = false
 	
 	var body: some View {
 		VStack(spacing: 0) {
 			stickerPackImage
 			detailView
 		}
+		.popup(isPresented: $showingPopup) { DownloadCompletedMessage() }
 		.edgesIgnoringSafeArea(.top)
 		.alert(isPresented: $showingAlert) { confirmAlert }
 	}
-	
+}
+
+private extension StickerPackDetailView {
 	var stickerPackImage: some View {
 		GeometryReader { _ in
 			Image(self.stickerPack.packImageName)
@@ -79,11 +85,17 @@ struct StickerPackDetailView: View {
 			title: Text("Download"),
 			message: Text("\(stickerPack.name)"),
 			primaryButton: .default(Text("Confirm"), action: {
-				//
+				self.placeCollection()
 			}),
 			secondaryButton: .cancel(Text("Cancle"))
 		)
 	}
+	
+	private func placeCollection() {
+		store.placeCollection(stickerpack: stickerPack)
+		showingPopup = true
+	}
+	
 }
 
 struct StickerPackDetailView_Previews: PreviewProvider {

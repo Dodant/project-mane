@@ -10,9 +10,16 @@ import Foundation
 
 final class Store: ObservableObject {
 	@Published var stickerPacks: [StickerPack]
+	@Published var collections: [Collection] = []
 	
 	init(filename: String = "StickerPackData.json") {
 		self.stickerPacks = Bundle.main.decode(filename: filename, as: [StickerPack].self)
+	}
+	
+	func placeCollection(stickerpack: StickerPack) {
+		let nextID = Collection.collectionSequence.next()!
+		let collection = Collection(id: nextID, stickerPack: stickerpack)
+		collections.append(collection)
 	}
 }
 
