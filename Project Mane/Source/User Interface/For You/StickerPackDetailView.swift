@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct StickerPackDetailView: View {
+	@State private var showingAlert: Bool = false
 	let stickerPack : StickerPack
 	
 	var body: some View {
@@ -17,6 +18,7 @@ struct StickerPackDetailView: View {
 			detailView
 		}
 		.edgesIgnoringSafeArea(.top)
+		.alert(isPresented: $showingAlert) { confirmAlert }
 	}
 	
 	var stickerPackImage: some View {
@@ -61,7 +63,7 @@ struct StickerPackDetailView: View {
 	}
 	
 	var placeDownload: some View {
-		Button(action: {}) {
+		Button(action: { self.showingAlert = true }) {
 			Capsule()
 				.fill(Color.sky)
 				.frame(maxWidth: .infinity, minHeight: 30, maxHeight: 55)
@@ -70,6 +72,17 @@ struct StickerPackDetailView: View {
 					.foregroundColor(Color.white))
 				.padding(.vertical, 8)
 		}
+	}
+	
+	var confirmAlert: Alert {
+		Alert(
+			title: Text("Download"),
+			message: Text("\(stickerPack.name)"),
+			primaryButton: .default(Text("Confirm"), action: {
+				//
+			}),
+			secondaryButton: .cancel(Text("Cancle"))
+		)
 	}
 }
 

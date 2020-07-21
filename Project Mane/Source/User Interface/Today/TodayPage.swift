@@ -34,8 +34,6 @@ struct TodayView: View {
 				}
 				.padding([.leading, .trailing, .top])
 				
-
-				
 				HighlightView(category: "WELCOME",
 							  title: "Adult Swim",
 							  message:"                                                                  ",

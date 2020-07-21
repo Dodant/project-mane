@@ -70,6 +70,7 @@ private extension StickerPackRow {
 			
 		}
 	}
+	
 }
 
 struct StickerPackRow_Previews: PreviewProvider {
