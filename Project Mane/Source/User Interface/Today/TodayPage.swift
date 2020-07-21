@@ -40,7 +40,6 @@ struct TodayView: View {
 							  imageName: "rick")
 					.frame(height: 500, alignment: .leading)
 				
-				
 				HighlightView(category: "WELCOME",
 							  title: "Riot Games",
 							  message:"                                                                  ",
@@ -54,7 +53,6 @@ struct TodayView: View {
 					.frame(height: 500, alignment: .leading)
 			}
 		}
-		
 	}
 	
 	func loadProfile(){

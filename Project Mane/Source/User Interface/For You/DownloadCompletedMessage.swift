@@ -13,7 +13,6 @@ struct DownloadCompletedMessage: View {
 		Text("Download Complete!")
 			.font(.system(size: 24))
 			.bold()
-			.kerning(1)
 	}
 }
 

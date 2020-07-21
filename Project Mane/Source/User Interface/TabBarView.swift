@@ -16,7 +16,7 @@ struct TabBarView: View {
 			Group {
 				today
 				foryou
-				live
+				collection
 				search
 			}
 			.accentColor(.primary)
@@ -32,7 +32,10 @@ private extension TabBarView {
 				self.selected = 0
 		}
 		.tabItem {
-			Image(systemName: "doc.plaintext").imageScale(.large)
+			Image(systemName: self.selected != 0
+				? "square.grid.2x2"
+				: "square.grid.2x2.fill"
+			).imageScale(.large)
 			Text("Today")
 		}
 		.tag(0)
@@ -44,20 +47,26 @@ private extension TabBarView {
 				self.selected = 1
 		}
 		.tabItem {
-			Image(systemName: "heart").imageScale(.large)
+			Image(systemName: self.selected != 1
+				? "heart"
+				: "heart.fill"
+			).imageScale(.large)
 			Text("For You")
 		}
 		.tag(1)
 		
 	}
-	var live: some View {
-		LiveView()
+	var collection: some View {
+		CollectionView()
 			.onTapGesture {
 				self.selected = 2
 		}
 		.tabItem {
-			Image(systemName: "dot.radiowaves.left.and.right").imageScale(.large)
-			Text("Live")
+			Image(systemName: self.selected != 2
+				? "tray.full"
+				: "tray.full.fill"
+			).imageScale(.large)
+			Text("Collection")
 		}
 		.tag(2)
 	}
@@ -67,7 +76,10 @@ private extension TabBarView {
 				self.selected = 3
 		}
 		.tabItem {
-			Image(systemName: "magnifyingglass").imageScale(.large)
+			Image(systemName: self.selected != 3
+				? "magnifyingglass.circle"
+				: "magnifyingglass.circle.fill"
+			).imageScale(.large)
 			Text("Search")
 		}
 		.tag(3)
