@@ -166,9 +166,9 @@
 		BB02A20924C1F981004CB0D2 /* For You */ = {
 			isa = PBXGroup;
 			children = (
-				BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */,
-				BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */,
 				BB02A21A24C1FF56004CB0D2 /* ForYouPage.swift */,
+				BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */,
+				BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */,
 				BB64494D24C5B57700A4D74B /* FavoriteButton.swift */,
 				BBB657E924C6F1EB00F7D173 /* DownloadCompletedMessage.swift */,
 			);

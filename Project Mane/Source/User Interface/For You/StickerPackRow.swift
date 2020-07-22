@@ -9,7 +9,10 @@
 import SwiftUI
 
 struct StickerPackRow: View {
+	@EnvironmentObject var store: Store
+	@Binding var quickDownload: StickerPack?
 	let stickerPack: StickerPack
+	
 	
 	var body: some View {
 		HStack(spacing: 0) {
@@ -21,6 +24,7 @@ struct StickerPackRow: View {
 		.cornerRadius(20)
 		.shadow(color: Color.primary.opacity(0.5), radius: 3, x: 2, y: 2)
 		.padding(.vertical, 4)
+		.contextMenu {contextMenu}
 	}
 }
 
@@ -32,7 +36,7 @@ private extension StickerPackRow {
 			.scaledToFit()
 			.frame(width: 120)
 			.clipped()
-			
+		
 	}
 	var packInfo: some View {
 		VStack(alignment: .leading) {
@@ -44,7 +48,6 @@ private extension StickerPackRow {
 				.fontWeight(.medium)
 				.padding(.bottom, 6)
 			
-			
 			Text(stickerPack.artist)
 				.font(.footnote)
 				.foregroundColor(.secondary)
@@ -52,7 +55,6 @@ private extension StickerPackRow {
 			Spacer()
 			
 			footerView
-			
 		}
 		.padding([.leading, .bottom], 11)
 		.padding([.top, .trailing])
@@ -65,17 +67,32 @@ private extension StickerPackRow {
 			
 			Image(systemName: "plus.circle")
 				.imageScale(.large)
-				.foregroundColor(Color("sky"))
+				.foregroundColor(Color.sky)
 				.frame(width: 35, height: 35)
-			
+				.onTapGesture { self.placeDownload() }
 		}
 	}
-	
+	var contextMenu: some View {
+		VStack{
+			Button(action: {self.toggleFavorite()}) {
+				Text("Toggle Favorite")
+				Image(self.stickerPack.isFavorite ? "heart.fill" : "heart")
+			}
+		}
+	}
+	func toggleFavorite(){
+		store.toggleFavorite(of: stickerPack)
+	}
+	func placeDownload(){
+		quickDownload = stickerPack
+		store.placeCollection(stickerpack: stickerPack)
+	}
 }
 
 struct StickerPackRow_Previews: PreviewProvider {
 	static var previews: some View {
-		StickerPackRow(stickerPack: stickerPackSamples[0])
+//		StickerPackRow(stickerPack: $0, quickDownload: .constant(nil))
+		StickerPackRow(quickDownload: .constant(nil), stickerPack: stickerPackSamples[0])
 	}
 }
 

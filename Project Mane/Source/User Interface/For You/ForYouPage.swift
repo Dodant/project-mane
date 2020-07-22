@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ForYouView: View {
 	@EnvironmentObject private var store: Store
+	@State private var quickDownload: StickerPack?
 	
 	var body: some View {
 		NavigationView {
@@ -17,11 +18,22 @@ struct ForYouView: View {
 				ForEach (store.stickerPacks) { stickerPack in
 					HStack {
 						NavigationLink(destination: StickerPackDetailView(stickerPack: stickerPack)) {
-							StickerPackRow(stickerPack: stickerPack)
+							StickerPackRow(quickDownload: self.$quickDownload, stickerPack: stickerPack)
 						}
 					}
 				}.navigationBarTitle("For You", displayMode: .automatic)
 			}
+		}.popup(item: $quickDownload, content: popupMessage(stickerPack:))
+	}
+	
+	func popupMessage(stickerPack: StickerPack) -> some View {
+		let name = stickerPack.name
+		return VStack{
+			Text(name)
+				.font(.title).bold()
+				.foregroundColor(.sky)
+				.padding()
+			DownloadCompletedMessage()
 		}
 	}
 }
