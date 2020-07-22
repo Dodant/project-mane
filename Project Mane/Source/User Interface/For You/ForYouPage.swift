@@ -23,7 +23,7 @@ struct ForYouView: View {
 					}
 				}.navigationBarTitle("For You", displayMode: .automatic)
 			}
-		}.popup(item: $quickDownload, content: popupMessage(stickerPack:))
+		}.popupOverContext(item: $quickDownload, content: popupMessage(stickerPack:))
 	}
 	
 	func popupMessage(stickerPack: StickerPack) -> some View {

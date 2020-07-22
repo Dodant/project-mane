@@ -23,7 +23,7 @@ struct StickerPack {
 }
 
 extension StickerPack : Identifiable { }
-extension StickerPack : Decodable { }
+extension StickerPack : Codable { }
 extension StickerPack : Equatable { }
 
 let stickerPackSamples = [
