@@ -9,13 +9,15 @@
 import SwiftUI
 
 struct SearchView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	var body: some View {
+		Text("HEY\nhi\nHELLO")
+			.bold()
+			.font(.custom("Ariel", size: 40))
+	}
 }
 
 struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-    }
+	static var previews: some View {
+		SearchView()
+	}
 }

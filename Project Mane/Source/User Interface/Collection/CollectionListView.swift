@@ -31,8 +31,8 @@ private extension CollectionListView {
 			ForEach(store.collections) {
 				CollectionRow(collection: $0)
 			}
-//			.onDelete(perform: store.deleteCollection(at:))
-//			.onMove(perform: store.moveCollection(from:to:))
+			.onDelete(perform: store.deleteCollection(at:))
+			.onMove(perform: store.moveCollection(from:to:))
 		}
 	}
 	

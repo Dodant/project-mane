@@ -48,7 +48,7 @@ private extension Store {
 		let manager = FileManager.default
 		let appSupportDir = manager.urls(for: .applicationSupportDirectory,
 										 in: .userDomainMask).first!
-		let bundleID = Bundle.main.bundleIdentifier ?? "com.OJK.Project-Mane"
+		let bundleID = Bundle.main.bundleIdentifier ?? "Project-Mane"
 		
 		let appDir = appSupportDir.appendingPathComponent(bundleID, isDirectory: true)
 		

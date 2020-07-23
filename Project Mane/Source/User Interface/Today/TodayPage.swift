@@ -34,18 +34,22 @@ struct TodayView: View {
 				}
 				.padding([.leading, .trailing, .top])
 				
-				HighlightView(category: "WELCOME",
-							  title: "Adult Swim",
-							  message:"                                                                  ",
-							  imageName: "rick")
-				HighlightView(category: "WELCOME",
-							  title: "Riot Games",
-							  message:"                                                                  ",
-							  imageName: "leagues")
+				HighlightView(category: "NEW PACK FROM",
+				title: "Adventure Time",
+				message:"The fun will never end\t\t\t\t\t\t\nit's Adventure Time.",
+				imageName: "time")
 				HighlightView(category: "NEW PACK FROM",
 							  title: "Pinkfong",
-							  message:"                                                                  ",
+							  message:"                                                                           ",
 							  imageName: "fong")
+				HighlightView(category: "WELCOME",
+							  title: "Riot Games",
+							  message:"                                                                            ",
+							  imageName: "leagues")
+				HighlightView(category: "WELCOME",
+							  title: "Adult Swim",
+							  message:"                                                                           ",
+							  imageName: "rick")
 			}
 		}
 	}
@@ -74,14 +78,14 @@ struct HighlightView: View {
 					.scaledToFill()
 				
 				LinearGradient(gradient: Gradient(
-					colors: [.clear, Color.black.opacity(0.2)]),
+					colors: [.clear, Color.black.opacity(0.15)]),
 							   startPoint: .top, endPoint: .bottom)
 				
 				VStack(alignment: .leading){
 					Text(category).foregroundColor(Color.white.opacity(0.5)).bold()
 					Text(title).foregroundColor(.white).font(Font.title).bold()
 					Spacer()
-					Text(message).foregroundColor(.white)
+					Text(message).font(.callout).fontWeight(.semibold).foregroundColor(Color.white)
 				}
 				.padding()
 				
