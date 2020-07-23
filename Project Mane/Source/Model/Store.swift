@@ -34,21 +34,21 @@ extension Store {
 	}
 	
 	func deleteCollection(at indexes: IndexSet) {
-	  guard let index = indexes.first else { return }
-	  collections.remove(at: index)
+		guard let index = indexes.first else { return }
+		collections.remove(at: index)
 	}
-
+	
 	func moveCollection(from indexes: IndexSet, to destination: Int) {
-	  collections.move(fromOffsets: indexes, toOffset: destination)
+		collections.move(fromOffsets: indexes, toOffset: destination)
 	}
 }
 
-private extension Store{
+private extension Store {
 	var collectionsFilePath: URL {
 		let manager = FileManager.default
 		let appSupportDir = manager.urls(for: .applicationSupportDirectory,
 										 in: .userDomainMask).first!
-		let bundleID = Bundle.main.bundleIdentifier ?? "Project Mane"
+		let bundleID = Bundle.main.bundleIdentifier ?? "com.OJK.Project-Mane"
 		
 		let appDir = appSupportDir.appendingPathComponent(bundleID, isDirectory: true)
 		

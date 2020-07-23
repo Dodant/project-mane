@@ -18,6 +18,6 @@ struct DownloadCompletedMessage: View {
 
 struct DownloadCompletedMessage_Previews: PreviewProvider {
 	static var previews: some View {
-		DownloadCompletedMessage()
+		 DownloadCompletedMessage()
 	}
 }

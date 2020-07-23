@@ -59,7 +59,14 @@ private extension StickerPackDetailView {
 				
 				Spacer()
 				
-				FavoriteButton(stickerPack: stickerPack)
+				VStack {
+					FavoriteButton(stickerPack: stickerPack)
+					
+					Image(systemName: "gift")
+						.imageScale(.large)
+						.foregroundColor(Color.sky)
+						.frame(width: 35, height: 35)
+				}
 			}
 			
 			Text(stickerPack.artist)
@@ -74,7 +81,7 @@ private extension StickerPackDetailView {
 				.fill(Color.sky)
 				.frame(maxWidth: .infinity, minHeight: 30, maxHeight: 55)
 				.overlay(Text("Download Pack")
-					.font(.system(size:27)).fontWeight(.medium)
+					.font(.system(size:25)).fontWeight(.regular)
 					.foregroundColor(Color.white))
 				.padding(.vertical, 8)
 		}
@@ -87,7 +94,7 @@ private extension StickerPackDetailView {
 			primaryButton: .default(Text("Confirm"), action: {
 				self.placeCollection()
 			}),
-			secondaryButton: .cancel(Text("Cancle"))
+			secondaryButton: .cancel(Text("Cancel"))
 		)
 	}
 	

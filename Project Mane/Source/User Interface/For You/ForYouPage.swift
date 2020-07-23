@@ -18,18 +18,23 @@ struct ForYouView: View {
 				ForEach (store.stickerPacks) { stickerPack in
 					HStack {
 						NavigationLink(destination: StickerPackDetailView(stickerPack: stickerPack)) {
-							StickerPackRow(quickDownload: self.$quickDownload, stickerPack: stickerPack)
+							StickerPackRow(stickerPack: stickerPack, quickDownload: self.$quickDownload)
 						}
 					}
-				}.navigationBarTitle("For You", displayMode: .automatic)
+				}
+				.navigationBarTitle("For You", displayMode: .automatic)
+				.padding()
 			}
 		}.popupOverContext(item: $quickDownload, content: popupMessage(stickerPack:))
 	}
 	
+	
+}
+
+private extension ForYouView {
 	func popupMessage(stickerPack: StickerPack) -> some View {
-		let name = stickerPack.name
 		return VStack{
-			Text(name)
+			Text(stickerPack.name)
 				.font(.title).bold()
 				.foregroundColor(.sky)
 				.padding()
@@ -40,7 +45,6 @@ struct ForYouView: View {
 
 struct ForYouView_Previews: PreviewProvider {
 	static var previews: some View {
-		Preview(source: ForYouView())
-			.environmentObject(Store())
+		Preview(source: ForYouView()).environmentObject(Store())
 	}
 }

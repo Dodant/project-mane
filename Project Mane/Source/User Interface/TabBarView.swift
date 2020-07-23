@@ -9,10 +9,14 @@
 import SwiftUI
 
 struct TabBarView: View {
-	@State private var selected = 0
+	private enum Tabs {
+		case today, foryou, collection, search
+	}
+	
+	@State private var selectedTab: Tabs = .today
 	
 	var body: some View {
-		TabView(selection: $selected){
+		TabView(selection: $selectedTab){
 			Group {
 				today
 				foryou
@@ -22,72 +26,59 @@ struct TabBarView: View {
 			.accentColor(.primary)
 		}
 		.accentColor(.sky)
+		.statusBar(hidden: selectedTab == .today)
 	}
 }
 
 private extension TabBarView {
 	var today: some View {
 		TodayView()
-			.onTapGesture {
-				self.selected = 0
-		}
-		.tabItem {
-			Image(systemName: self.selected != 0
+			.tag(Tabs.today)
+			.tabItem(image: self.selectedTab != Tabs.today
 				? "square.grid.2x2"
-				: "square.grid.2x2.fill"
-			).imageScale(.large)
-			Text("Today")
-		}
-		.tag(0)
+				: "square.grid.2x2.fill", text: "Today")
+			.onTapGesture { self.selectedTab = Tabs.today }
 	}
 	var foryou: some View {
 		ForYouView()
+			.tag(Tabs.foryou)
 			.environmentObject(Store())
-			.onTapGesture {
-				self.selected = 1
-		}
-		.tabItem {
-			Image(systemName: self.selected != 1
+			.tabItem(image: self.selectedTab != Tabs.foryou
 				? "heart"
-				: "heart.fill"
-			).imageScale(.large)
-			Text("For You")
-		}
-		.tag(1)
-		
+				: "heart.fill", text: "For You")
+			.onTapGesture { self.selectedTab = Tabs.foryou }
 	}
 	var collection: some View {
 		CollectionView()
-			.onTapGesture {
-				self.selected = 2
-		}
-		.tabItem {
-			Image(systemName: self.selected != 2
+			.tag(Tabs.collection)
+			.tabItem(image: self.selectedTab != Tabs.collection
 				? "tray.full"
-				: "tray.full.fill"
-			).imageScale(.large)
-			Text("Collection")
-		}
-		.tag(2)
+				: "tray.full.fill", text: "Collection")
+			.onTapGesture { self.selectedTab = Tabs.collection }
 	}
 	var search: some View {
 		SearchView()
-			.onTapGesture {
-				self.selected = 3
-		}
-		.tabItem {
-			Image(systemName: self.selected != 3
+			.tag(Tabs.search)
+			.tabItem(image: self.selectedTab != Tabs.search
 				? "magnifyingglass.circle"
-				: "magnifyingglass.circle.fill"
-			).imageScale(.large)
-			Text("Search")
+				: "magnifyingglass.circle.fill", text: "Search")
+			.onTapGesture { self.selectedTab = Tabs.search }
+	}
+}
+
+fileprivate extension View {
+	func tabItem(image: String, text: String) -> some View {
+		self.tabItem {
+			Image(systemName: image)
+				.imageScale(.large)
+				.font(Font.system(size: 17, weight: .light))
+			Text(text)
 		}
-		.tag(3)
 	}
 }
 
 struct TabBarView_Previews: PreviewProvider {
 	static var previews: some View {
-		TabBarView()
+		TabBarView().environmentObject(Store())
 	}
 }

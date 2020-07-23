@@ -10,9 +10,8 @@ import SwiftUI
 
 struct StickerPackRow: View {
 	@EnvironmentObject var store: Store
-	@Binding var quickDownload: StickerPack?
 	let stickerPack: StickerPack
-	
+	@Binding var quickDownload: StickerPack?
 	
 	var body: some View {
 		HStack(spacing: 0) {
@@ -43,7 +42,6 @@ private extension StickerPackRow {
 			Spacer()
 			
 			Text(stickerPack.name)
-				.foregroundColor(Color.black)
 				.font(.headline)
 				.fontWeight(.medium)
 				.padding(.bottom, 6)
@@ -60,7 +58,7 @@ private extension StickerPackRow {
 		.padding([.top, .trailing])
 	}
 	var footerView: some View {
-		HStack(spacing: 5) {
+		HStack(spacing: 10) {
 			Spacer()
 			
 			FavoriteButton(stickerPack: stickerPack)
@@ -76,7 +74,11 @@ private extension StickerPackRow {
 		VStack{
 			Button(action: {self.toggleFavorite()}) {
 				Text("Toggle Favorite")
-				Image(self.stickerPack.isFavorite ? "heart.fill" : "heart")
+				Image(systemName: self.stickerPack.isFavorite ? "heart" : "heart.fill")
+			}
+			Button(action: {self.placeDownload()}) {
+				Text("Download Pack")
+				Image(systemName: "cube.fill")
 			}
 		}
 	}
@@ -91,8 +93,15 @@ private extension StickerPackRow {
 
 struct StickerPackRow_Previews: PreviewProvider {
 	static var previews: some View {
-//		StickerPackRow(stickerPack: $0, quickDownload: .constant(nil))
-		StickerPackRow(quickDownload: .constant(nil), stickerPack: stickerPackSamples[0])
+		Group {
+		  ForEach(stickerPackSamples) {
+			StickerPackRow(stickerPack: $0, quickDownload: .constant(nil))
+		  }
+		  StickerPackRow(stickerPack: stickerPackSamples[0], quickDownload: .constant(nil))
+			.preferredColorScheme(.dark)
+		}
+		.padding()
+		.previewLayout(.sizeThatFits)
 	}
 }
 

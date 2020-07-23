@@ -30,7 +30,7 @@ struct TodayView: View {
 						Image(systemName: "person.crop.circle")
 							.resizable()
 							.frame(width: 40, height: 40, alignment: .trailing)
-					}).accentColor(.blue)
+					}).accentColor(.sky)
 				}
 				.padding([.leading, .trailing, .top])
 				
@@ -38,26 +38,19 @@ struct TodayView: View {
 							  title: "Adult Swim",
 							  message:"                                                                  ",
 							  imageName: "rick")
-					.frame(height: 500, alignment: .leading)
-				
 				HighlightView(category: "WELCOME",
 							  title: "Riot Games",
 							  message:"                                                                  ",
 							  imageName: "leagues")
-					.frame(height: 500, alignment: .leading)
-				
 				HighlightView(category: "NEW PACK FROM",
 							  title: "Pinkfong",
 							  message:"                                                                  ",
 							  imageName: "fong")
-					.frame(height: 500, alignment: .leading)
 			}
 		}
 	}
 	
-	func loadProfile(){
-		
-	}
+	func loadProfile(){ }
 	
 	func todayFormatter() -> String {
 		let date = Date()
@@ -97,6 +90,7 @@ struct HighlightView: View {
 		.cornerRadius(30)
 		.padding()
 		.shadow(radius: 10)
+		.frame(height: 500, alignment: .leading)
 	}
 	
 }

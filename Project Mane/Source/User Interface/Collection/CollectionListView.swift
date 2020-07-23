@@ -13,21 +13,27 @@ struct CollectionListView: View {
 	
 	var body: some View {
 		ZStack {
-			if store.collections.isEmpty {
+//			if store.collections.isEmpty {
 				emptyOrders
-			} else {
-				collectionList
-			}
+//			} else {
+//				collectionList
+//			}
 		}
 		.animation(.default)
 		.navigationBarTitle("Downloaded")
-		.navigationBarItems(trailing: editButton)
+//		.navigationBarItems(trailing: editButton)
 	}
-	
-	var editButton: some View {
-		!store.collections.isEmpty
-			? AnyView(EditButton())
-			: AnyView(EmptyView())
+}
+
+private extension CollectionListView {
+	var collectionList: some View {
+		List {
+			ForEach(store.collections) {
+				CollectionRow(collection: $0)
+			}
+//			.onDelete(perform: store.deleteCollection(at:))
+//			.onMove(perform: store.moveCollection(from:to:))
+		}
 	}
 	
 	var emptyOrders: some View {
@@ -44,19 +50,15 @@ struct CollectionListView: View {
 		.background(Color.background)
 	}
 	
-	var collectionList: some View {
-		List {
-			ForEach(store.collections) {
-				CollectionRow(collection: $0)
-			}
-			.onDelete(perform: store.deleteCollection(at:))
-			.onMove(perform: store.moveCollection(from:to:))
-		}
+	var editButton: some View {
+		!store.collections.isEmpty
+			? AnyView(EditButton())
+			: AnyView(EmptyView())
 	}
 }
 
 struct CollectionListView_Previews: PreviewProvider {
 	static var previews: some View {
-		CollectionListView()
+		 CollectionListView()
 	}
 }

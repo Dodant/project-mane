@@ -14,7 +14,8 @@ struct CollectionRow: View {
 	var body: some View {
 		HStack {
 			ResizedImage(collection.stickerPack.packImageName)
-				.frame(width: 60, height: 60)
+				.scaledToFill()
+				.frame(width: 70, height: 70)
 				.clipShape(Circle())
 				.padding()
 			
@@ -27,5 +28,14 @@ struct CollectionRow: View {
 			}
 		}
 		.frame(height: 70)
+	}
+}
+
+struct CollectionRow_Previews: PreviewProvider {
+	static var previews: some View {
+		List(stickerPackSamples.indices) { index in
+			CollectionRow(collection:
+				Collection(id: index,stickerPack: stickerPackSamples[index]))
+		}
 	}
 }
