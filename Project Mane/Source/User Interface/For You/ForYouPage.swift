@@ -27,8 +27,6 @@ struct ForYouView: View {
 			}
 		}.popupOverContext(item: $quickDownload, content: popupMessage(stickerPack:))
 	}
-	
-	
 }
 
 private extension ForYouView {

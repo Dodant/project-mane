@@ -13,15 +13,15 @@ struct CollectionListView: View {
 	
 	var body: some View {
 		ZStack {
-//			if store.collections.isEmpty {
+			if store.collections.isEmpty {
 				emptyOrders
-//			} else {
-//				collectionList
-//			}
+			} else {
+				collectionList
+			}
 		}
 		.animation(.default)
 		.navigationBarTitle("Downloaded")
-//		.navigationBarItems(trailing: editButton)
+		.navigationBarItems(trailing: editButton)
 	}
 }
 

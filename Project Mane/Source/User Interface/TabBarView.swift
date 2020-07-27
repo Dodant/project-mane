@@ -26,7 +26,6 @@ struct TabBarView: View {
 			.accentColor(.primary)
 		}
 		.accentColor(.sky)
-		.statusBar(hidden: selectedTab == .today)
 	}
 }
 
