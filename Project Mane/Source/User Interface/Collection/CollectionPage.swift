@@ -9,27 +9,56 @@
 import SwiftUI
 
 struct CollectionView: View {
+	@EnvironmentObject var store: Store
+	
 	var body: some View {
 		NavigationView {
-			Form {
-				downloadInfoSection
+			ZStack {
+				if store.collections.isEmpty {
+					emptyOrders
+				} else {
+					collectionList
+				}
 			}
+			.animation(.default)
 			.navigationBarTitle("Collection")
+			.navigationBarItems(trailing: editButton)
 		}
 	}
 	
-	var downloadInfoSection: some View {
-		Section(header: Text("Info").fontWeight(.medium)){
-			NavigationLink(destination: CollectionListView()) {
-				Text("Downloaded")
+	var collectionList: some View {
+		List {
+			ForEach(store.collections) {
+				CollectionRow(collection: $0)
 			}
-			.frame(height: 44)
+			.onDelete(perform: store.deleteCollection(at:))
+			.onMove(perform: store.moveCollection(from:to:))
 		}
+	}
+	
+	var emptyOrders: some View {
+		VStack(spacing: 25){
+			Image(systemName: "cube.box")
+				.resizable()
+				.frame(width: 100.0, height: 100.0)
+				.imageScale(.large)
+				.foregroundColor(Color.gray.opacity(0.4))
+			Text("You Haven't Downloaded Yet")
+				.font(.headline).fontWeight(.medium)
+		}
+		.frame(maxWidth: .infinity, maxHeight: .infinity)
+		.background(Color.background)
+	}
+	
+	var editButton: some View {
+		!store.collections.isEmpty
+			? AnyView(EditButton())
+			: AnyView(EmptyView())
 	}
 }
 
 struct CollectionView_Previews: PreviewProvider {
 	static var previews: some View {
-		 CollectionView()
+		CollectionView()
 	}
 }

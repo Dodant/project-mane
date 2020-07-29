@@ -17,7 +17,6 @@
 		BB02A21F24C1FF72004CB0D2 /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02A21E24C1FF72004CB0D2 /* SearchPage.swift */; };
 		BB02A22124C1FF7D004CB0D2 /* ProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB02A22024C1FF7D004CB0D2 /* ProfilePage.swift */; };
 		BB5411FE24C870CB001EDEA0 /* CollectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5411FD24C870CB001EDEA0 /* CollectionRow.swift */; };
-		BB54120024C87322001EDEA0 /* CollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5411FF24C87322001EDEA0 /* CollectionListView.swift */; };
 		BB54120224C874F2001EDEA0 /* ResizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB54120124C874F2001EDEA0 /* ResizedImage.swift */; };
 		BB62347E24C1D42F004F8099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62347D24C1D42F004F8099 /* AppDelegate.swift */; };
 		BB62348024C1D42F004F8099 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB62347F24C1D42F004F8099 /* SceneDelegate.swift */; };
@@ -60,7 +59,6 @@
 		BB02A21E24C1FF72004CB0D2 /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		BB02A22024C1FF7D004CB0D2 /* ProfilePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePage.swift; sourceTree = "<group>"; };
 		BB5411FD24C870CB001EDEA0 /* CollectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRow.swift; sourceTree = "<group>"; };
-		BB5411FF24C87322001EDEA0 /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
 		BB54120124C874F2001EDEA0 /* ResizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizedImage.swift; sourceTree = "<group>"; };
 		BB62347A24C1D42F004F8099 /* Project Mane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Mane.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB62347D24C1D42F004F8099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 			children = (
 				BB02A21C24C1FF63004CB0D2 /* CollectionPage.swift */,
 				BB5411FD24C870CB001EDEA0 /* CollectionRow.swift */,
-				BB5411FF24C87322001EDEA0 /* CollectionListView.swift */,
 			);
 			path = Collection;
 			sourceTree = "<group>";
@@ -403,7 +400,6 @@
 				BBF5EA9F24C40BBF00D2474F /* ColorExtension.swift in Sources */,
 				BB02A21D24C1FF63004CB0D2 /* CollectionPage.swift in Sources */,
 				BB62348024C1D42F004F8099 /* SceneDelegate.swift in Sources */,
-				BB54120024C87322001EDEA0 /* CollectionListView.swift in Sources */,
 				BB54120224C874F2001EDEA0 /* ResizedImage.swift in Sources */,
 				BBB657E524C6DFDE00F7D173 /* Collection.swift in Sources */,
 				BB6B731224C55F42001FE140 /* TabBarView.swift in Sources */,
