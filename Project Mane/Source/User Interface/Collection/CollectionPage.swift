@@ -51,9 +51,7 @@ struct CollectionView: View {
 	}
 	
 	var editButton: some View {
-		!store.collections.isEmpty
-			? AnyView(EditButton())
-			: AnyView(EmptyView())
+		!store.collections.isEmpty ? AnyView(EditButton()) : AnyView(EmptyView())
 	}
 }
 

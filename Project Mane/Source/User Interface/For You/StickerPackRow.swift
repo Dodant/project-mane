@@ -104,5 +104,3 @@ struct StickerPackRow_Previews: PreviewProvider {
 		.previewLayout(.sizeThatFits)
 	}
 }
-
-

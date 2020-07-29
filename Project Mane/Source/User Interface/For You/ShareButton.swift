@@ -12,7 +12,6 @@ import UIKit
 struct ShareButton: View {
 	@State private var isSharingSheetShowing = false
 	
-	
 	var body: some View {
 		Button(action: share ) {
 			Image(systemName: "square.and.arrow.up")

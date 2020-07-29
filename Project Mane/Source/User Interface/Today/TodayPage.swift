@@ -59,8 +59,6 @@ struct TodayView: View {
 			}
 		}
 	}
-	
-//	func loadProfile(){ }
 
 	func todayFormatter() -> String {
 		let formatter = DateFormatter()
@@ -108,4 +106,3 @@ struct TodayView_Previews: PreviewProvider {
 		TodayView()
 	}
 }
-

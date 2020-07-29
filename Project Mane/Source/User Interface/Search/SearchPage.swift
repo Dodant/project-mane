@@ -29,7 +29,6 @@ struct SearchView: View {
 }
 
 struct SearchBar: UIViewRepresentable {
-	
 	@Binding var text: String
 	var placeholder: String
 	
