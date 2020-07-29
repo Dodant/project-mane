@@ -13,8 +13,12 @@ struct ProfileView: View {
 	@State var darkModeEnabled: Bool = false
 	@State var userName: String = ""
 	@State var selectedDate = Date()
+	
 	@State private var genderIndex = 0
 	var genderOptions = ["🙍‍♂️ Male", "🙍‍♀️ Female", "🤖 Other"]
+	
+	@State private var modeIndex = 0
+	var modeOptions = ["Automatic", "Light", "Dark"]
 
 	
 	var body: some View {
@@ -40,17 +44,20 @@ struct ProfileView: View {
 				}
 			}
 			DatePicker("Date of Birth", selection: $selectedDate, displayedComponents: .date)
+			Text("Email")
 		}
 	}
 	
 	var settingSection: some View {
 		Section(header: Text("APP SETTINGS").fontWeight(.medium)) {
 			Text("Accessibility")
-			Text("Language")
-			Text("Theme")
+			Text("Language & Region")
+			Text("Themes")
 			Text("App Icon")
-			Toggle(isOn: $darkModeEnabled) {
-				Text("Dark Mode")
+			Picker(selection: $modeIndex, label: Text("Dark Mode")) {
+				ForEach(0 ..< modeOptions.count) {
+					Text(self.modeOptions[$0])
+				}
 			}
 			Toggle(isOn: $notificationsEnabled) {
 				Text("Enable Notifications")
@@ -75,6 +82,7 @@ struct ProfileView: View {
 				Text("1.0").foregroundColor(.secondaryText)
 			}
 			Text("Terms of Service")
+			Text("Privacy Policy")
 		}
 	}
 	

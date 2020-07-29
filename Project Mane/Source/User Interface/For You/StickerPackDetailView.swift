@@ -27,6 +27,7 @@ struct StickerPackDetailView: View {
 }
 
 private extension StickerPackDetailView {
+	
 	var stickerPackImage: some View {
 		GeometryReader { _ in
 			Image(self.stickerPack.packImageName)
@@ -61,11 +62,7 @@ private extension StickerPackDetailView {
 				
 				VStack {
 					FavoriteButton(stickerPack: stickerPack)
-					
-					Image(systemName: "gift")
-						.imageScale(.large)
-						.foregroundColor(Color.sky)
-						.frame(width: 35, height: 35)
+					ShareButton()
 				}
 			}
 			
@@ -102,7 +99,7 @@ private extension StickerPackDetailView {
 		store.placeCollection(stickerpack: stickerPack)
 		showingPopup = true
 	}
-	
+		
 }
 
 struct StickerPackDetailView_Previews: PreviewProvider {
