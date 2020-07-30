@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SearchView: View {
-	let keywords = ["Welcome to the Final Show", "Adult Swim", "Riot Games", "HTF", "Kakao Friends", "BTS", "Simpsons", "♥︎ Econovation ♥︎"]
+	let keywords = ["Welcome to the Final Show", "Adult Swim", "Riot Games", "HTF", "Kakao Friends", "BTS", "Simpsons", "♥︎ Econovation ♥︎", "Give people wonderful tools", "And they'll do wonderful things"]
 	@State private var searchText : String = ""
 	
 	var body: some View {
@@ -19,8 +19,8 @@ struct SearchView: View {
 				List {
 					ForEach(self.keywords.filter {
 						self.searchText.isEmpty ? true : $0.lowercased().contains(self.searchText.lowercased())
-					}, id: \.self) { car in
-						Text(car)
+					}, id: \.self) { word in
+						Text(word)
 					}
 				}.navigationBarTitle(Text("Search"))
 			}

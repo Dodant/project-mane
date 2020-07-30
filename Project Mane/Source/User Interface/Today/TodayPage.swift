@@ -44,10 +44,10 @@ struct TodayView: View {
 							  title: "Adventure Time",
 							  message:"The fun will never end\t\t\t\t\t\t\nit's Adventure Time.",
 							  imageName: "time")
-				HighlightView(category: "NEW PACK FROM",
-							  title: "Pinkfong",
+				HighlightView(category: "Collaboration",
+							  title: "Econovation | Palette",
 							  message:"                                                                           ",
-							  imageName: "fong")
+							  imageName: "econo")
 				HighlightView(category: "WELCOME",
 							  title: "Riot Games",
 							  message:"                                                                            ",
