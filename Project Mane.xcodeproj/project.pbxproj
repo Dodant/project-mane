@@ -33,6 +33,7 @@
 		BBB8617424C42D490031CD82 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8617324C42D490031CD82 /* Store.swift */; };
 		BBB8617624C436EB0031CD82 /* StickerPackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */; };
 		BBE7C82124D14AD200A9C553 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7C82024D14AD200A9C553 /* ShareButton.swift */; };
+		BBE7C82324D2796D00A9C553 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7C82224D2796D00A9C553 /* ImagePickerView.swift */; };
 		BBF5EA9D24C40A1700D2474F /* StickerPackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */; };
 		BBF5EA9F24C40BBF00D2474F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF5EA9E24C40BBF00D2474F /* ColorExtension.swift */; };
 		BBF5EAA924C41B4C00D2474F /* StickerPackData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBF5EAA824C41B4C00D2474F /* StickerPackData.json */; };
@@ -78,6 +79,7 @@
 		BBB8617324C42D490031CD82 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackDetailView.swift; sourceTree = "<group>"; };
 		BBE7C82024D14AD200A9C553 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		BBE7C82224D2796D00A9C553 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackRow.swift; sourceTree = "<group>"; };
 		BBF5EA9E24C40BBF00D2474F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BBF5EAA824C41B4C00D2474F /* StickerPackData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StickerPackData.json; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				BB02A22024C1FF7D004CB0D2 /* ProfilePage.swift */,
+				BBE7C82224D2796D00A9C553 /* ImagePickerView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				BB02A21024C1FA0B004CB0D2 /* Sticker.swift in Sources */,
 				BBF5EA9D24C40A1700D2474F /* StickerPackRow.swift in Sources */,
 				BB02A21424C1FA2A004CB0D2 /* User.swift in Sources */,
+				BBE7C82324D2796D00A9C553 /* ImagePickerView.swift in Sources */,
 				BB02A21B24C1FF56004CB0D2 /* ForYouPage.swift in Sources */,
 				BB64494C24C5B3DD00A4D74B /* Preview.swift in Sources */,
 				BB02A21924C1FF3F004CB0D2 /* TodayPage.swift in Sources */,

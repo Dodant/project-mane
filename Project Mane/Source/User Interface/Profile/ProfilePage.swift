@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct ProfileView: View {
+	@State private var pickedImage: Image = Image(systemName: "person.crop.circle")
+	@State private var nickname: String = ""
+	@State private var isPickerPresented: Bool = false
+	
 	@State var notificationsEnabled: Bool = true
 	@State var darkModeEnabled: Bool = false
-	@State var userName: String = ""
 	@State var selectedDate = Date()
 	
 	@State private var genderIndex = 0
@@ -19,11 +22,13 @@ struct ProfileView: View {
 	
 	@State private var modeIndex = 0
 	var modeOptions = ["Automatic", "Light", "Dark"]
-
+	
 	
 	var body: some View {
 		NavigationView {
 			VStack {
+				userInfo
+				
 				Form {
 					profileSection
 					settingSection
@@ -33,11 +38,51 @@ struct ProfileView: View {
 				}
 			}.navigationBarTitle("My Account")
 		}
+		.sheet(isPresented: $isPickerPresented) {
+			ImagePickerView(pickedImage: self.$pickedImage)
+		}
+	}
+	
+	var userInfo: some View {
+		VStack {
+			profileImage
+			nicknameTextField
+		}
+		.frame(maxWidth: .infinity, minHeight: 200)
+		.background(Color.background)
+	}
+	
+	var profileImage: some View {
+		pickedImage
+			.resizable().scaledToFill()
+			.clipShape(Circle())
+			.frame(width: 100, height: 100)
+			.overlay(pickImageButton.offset(x:4, y:0), alignment: .bottomTrailing)
+	}
+	
+	var pickImageButton: some View {
+		Button(action: {
+			self.isPickerPresented = true
+		}) {
+			Circle()
+				.fill(Color.white)
+				.frame(width: 32, height: 32)
+				.shadow(color: .primaryShadow, radius: 2, x: 2, y: 2)
+				.overlay(Image(systemName: "photo").foregroundColor(.black))
+		}
+	}
+	
+	var nicknameTextField: some View {
+		TextField("Nickname", text: $nickname)
+			.font(.system(size:25, weight: .medium))
+			.textContentType(.nickname)
+			.multilineTextAlignment(.center)
+			.autocapitalization(.none)
 	}
 	
 	var profileSection: some View {
 		Section(header: Text("PROFILE").fontWeight(.medium)) {
-			TextField("Username", text: $userName)
+//			TextField("Username", text: $userName)
 			Picker(selection: $genderIndex, label: Text("Gender")) {
 				ForEach(0 ..< genderOptions.count) {
 					Text(self.genderOptions[$0])
