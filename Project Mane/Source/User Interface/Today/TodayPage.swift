@@ -45,8 +45,8 @@ struct TodayView: View {
 							  message:"The fun will never end\t\t\t\t\t\t\nit's Adventure Time.",
 							  imageName: "time")
 				HighlightView(category: "Collaboration",
-							  title: "Econovation | Palette",
-							  message:"                                                                           ",
+							  title: "ECNV  |  Palette",
+							  message:"Copyright by RHJ & KITE                              ",
 							  imageName: "econo")
 				HighlightView(category: "WELCOME",
 							  title: "Riot Games",

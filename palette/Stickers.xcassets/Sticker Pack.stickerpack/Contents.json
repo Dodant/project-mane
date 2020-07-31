@@ -1,0 +1,35 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  },
+  "stickers" : [
+    {
+      "filename" : "Bee_Sad_Emote.sticker"
+    },
+    {
+      "filename" : "Bee_Happy_Emote.sticker"
+    },
+    {
+      "filename" : "Bee_Mad_Emote.sticker"
+    },
+    {
+      "filename" : "Let's_Do_This_Emote.sticker"
+    },
+    {
+      "filename" : "Sticker.sticker"
+    },
+    {
+      "filename" : "Happy_10!_Emote.sticker"
+    },
+    {
+      "filename" : "Does_Not_Compute_Emote.sticker"
+    },
+    {
+      "filename" : "Scout-Approved_Emote.sticker"
+    }
+  ]
+}

@@ -34,6 +34,8 @@
 		BBB8617624C436EB0031CD82 /* StickerPackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */; };
 		BBE7C82124D14AD200A9C553 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7C82024D14AD200A9C553 /* ShareButton.swift */; };
 		BBE7C82324D2796D00A9C553 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7C82224D2796D00A9C553 /* ImagePickerView.swift */; };
+		BBE7C82B24D3D12B00A9C553 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE7C82A24D3D12B00A9C553 /* Stickers.xcassets */; };
+		BBE7C82F24D3D12B00A9C553 /* palette.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BBE7C82824D3D12200A9C553 /* palette.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BBF5EA9D24C40A1700D2474F /* StickerPackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */; };
 		BBF5EA9F24C40BBF00D2474F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF5EA9E24C40BBF00D2474F /* ColorExtension.swift */; };
 		BBF5EAA924C41B4C00D2474F /* StickerPackData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBF5EAA824C41B4C00D2474F /* StickerPackData.json */; };
@@ -47,7 +49,28 @@
 			remoteGlobalIDString = BB62347924C1D42F004F8099;
 			remoteInfo = "Project Mane";
 		};
+		BBE7C82D24D3D12B00A9C553 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB62347224C1D42F004F8099 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBE7C82724D3D12200A9C553;
+			remoteInfo = palette;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BBE7C83324D3D12B00A9C553 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BBE7C82F24D3D12B00A9C553 /* palette.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BB02A20D24C1F9FB004CB0D2 /* StickerPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPack.swift; sourceTree = "<group>"; };
@@ -80,6 +103,9 @@
 		BBB8617524C436EB0031CD82 /* StickerPackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackDetailView.swift; sourceTree = "<group>"; };
 		BBE7C82024D14AD200A9C553 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
 		BBE7C82224D2796D00A9C553 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		BBE7C82824D3D12200A9C553 /* palette.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = palette.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBE7C82A24D3D12B00A9C553 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		BBE7C82C24D3D12B00A9C553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF5EA9C24C40A1700D2474F /* StickerPackRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerPackRow.swift; sourceTree = "<group>"; };
 		BBF5EA9E24C40BBF00D2474F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		BBF5EAA824C41B4C00D2474F /* StickerPackData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StickerPackData.json; sourceTree = "<group>"; };
@@ -223,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				BB62347C24C1D42F004F8099 /* Project Mane */,
+				BBE7C82924D3D12200A9C553 /* palette */,
 				BB62347B24C1D42F004F8099 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -232,6 +259,7 @@
 			children = (
 				BB62347A24C1D42F004F8099 /* Project Mane.app */,
 				BB62349024C1D431004F8099 /* Project ManeUITests.xctest */,
+				BBE7C82824D3D12200A9C553 /* palette.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,6 +314,15 @@
 			path = "View Modifier";
 			sourceTree = "<group>";
 		};
+		BBE7C82924D3D12200A9C553 /* palette */ = {
+			isa = PBXGroup;
+			children = (
+				BBE7C82A24D3D12B00A9C553 /* Stickers.xcassets */,
+				BBE7C82C24D3D12B00A9C553 /* Info.plist */,
+			);
+			path = palette;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,10 +333,12 @@
 				BB62347624C1D42F004F8099 /* Sources */,
 				BB62347724C1D42F004F8099 /* Frameworks */,
 				BB62347824C1D42F004F8099 /* Resources */,
+				BBE7C83324D3D12B00A9C553 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BBE7C82E24D3D12B00A9C553 /* PBXTargetDependency */,
 			);
 			name = "Project Mane";
 			productName = "Project Mane";
@@ -324,6 +363,21 @@
 			productReference = BB62349024C1D431004F8099 /* Project ManeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BBE7C82724D3D12200A9C553 /* palette */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBE7C83024D3D12B00A9C553 /* Build configuration list for PBXNativeTarget "palette" */;
+			buildPhases = (
+				BBE7C82624D3D12200A9C553 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = palette;
+			productName = palette;
+			productReference = BBE7C82824D3D12200A9C553 /* palette.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -340,6 +394,9 @@
 					BB62348F24C1D431004F8099 = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = BB62347924C1D42F004F8099;
+					};
+					BBE7C82724D3D12200A9C553 = {
+						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
@@ -358,6 +415,7 @@
 			targets = (
 				BB62347924C1D42F004F8099 /* Project Mane */,
 				BB62348F24C1D431004F8099 /* Project ManeUITests */,
+				BBE7C82724D3D12200A9C553 /* palette */,
 			);
 		};
 /* End PBXProject section */
@@ -378,6 +436,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBE7C82624D3D12200A9C553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBE7C82B24D3D12B00A9C553 /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +497,11 @@
 			isa = PBXTargetDependency;
 			target = BB62347924C1D42F004F8099 /* Project Mane */;
 			targetProxy = BB62349124C1D431004F8099 /* PBXContainerItemProxy */;
+		};
+		BBE7C82E24D3D12B00A9C553 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBE7C82724D3D12200A9C553 /* palette */;
+			targetProxy = BBE7C82D24D3D12B00A9C553 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -638,6 +709,36 @@
 			};
 			name = Release;
 		};
+		BBE7C83124D3D12B00A9C553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DY5CLPAQHF;
+				INFOPLIST_FILE = palette/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OJK.Project-Mane.palette";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBE7C83224D3D12B00A9C553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DY5CLPAQHF;
+				INFOPLIST_FILE = palette/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OJK.Project-Mane.palette";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -664,6 +765,15 @@
 			buildConfigurations = (
 				BB62349D24C1D431004F8099 /* Debug */,
 				BB62349E24C1D431004F8099 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBE7C83024D3D12B00A9C553 /* Build configuration list for PBXNativeTarget "palette" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBE7C83124D3D12B00A9C553 /* Debug */,
+				BBE7C83224D3D12B00A9C553 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
