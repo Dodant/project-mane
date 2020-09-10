@@ -8,20 +8,24 @@
 
 import Foundation
 
-enum Sex {
-	case male, female
+struct User: Codable {
+	let fullName, email, authState: String
 }
 
-struct User {
-	let name: String
-	let nickname: String
-	let age: Int
-	let sex: Sex
-	let email: String
-	
-	let id: String
-	let password: String
-	
-	let subscriptionDate: Date
-	let isSubscriber: Bool
-}
+//enum Sex {
+//	case male, female
+//}
+//
+//struct User {
+//	let name: String
+//	let nickname: String
+//	let age: Int
+//	let sex: Sex
+//	let email: String
+//
+//	let id: String
+//	let password: String
+//
+//	let subscriptionDate: Date
+//	let isSubscriber: Bool
+//}

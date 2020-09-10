@@ -12,7 +12,7 @@ struct Artist {
 	let name: String
 	let nickname: String
 	let age: Int
-	let sex: Sex
+//	let sex: Sex
 	let email: String
 	let bankAccount: String
 	
